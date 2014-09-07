@@ -14,13 +14,15 @@
 		1718E8BD19BC835200257FC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8BC19BC835200257FC2 /* main.m */; };
 		1718E8C119BC835300257FC2 /* QTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8C019BC835300257FC2 /* QTRAppDelegate.m */; };
 		1718E8C419BC835300257FC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1718E8C219BC835300257FC2 /* Main.storyboard */; };
-		1718E8C719BC835300257FC2 /* QTRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8C619BC835300257FC2 /* QTRViewController.m */; };
 		1718E8C919BC835300257FC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1718E8C819BC835300257FC2 /* Images.xcassets */; };
 		1718E8D019BC835300257FC2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1718E8CF19BC835300257FC2 /* XCTest.framework */; };
 		1718E8D119BC835300257FC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1718E8B019BC835200257FC2 /* Foundation.framework */; };
 		1718E8D219BC835300257FC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1718E8B419BC835200257FC2 /* UIKit.framework */; };
 		1718E8DA19BC835300257FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1718E8D819BC835300257FC2 /* InfoPlist.strings */; };
 		1718E8DC19BC835300257FC2 /* CircularTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8DB19BC835300257FC2 /* CircularTimerTests.m */; };
+		1718E8EA19BC844200257FC2 /* QTRCircularTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8E919BC844200257FC2 /* QTRCircularTimerViewController.m */; };
+		1718E8ED19BCACA000257FC2 /* QTRCircularTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8EC19BCACA000257FC2 /* QTRCircularTimerView.m */; };
+		1726708E19BCEFDC006C0D04 /* QTRTimeEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1726708D19BCEFDC006C0D04 /* QTRTimeEmitter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,18 @@
 		1718E8BF19BC835300257FC2 /* QTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRAppDelegate.h; sourceTree = "<group>"; };
 		1718E8C019BC835300257FC2 /* QTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRAppDelegate.m; sourceTree = "<group>"; };
 		1718E8C319BC835300257FC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1718E8C519BC835300257FC2 /* QTRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRViewController.h; sourceTree = "<group>"; };
-		1718E8C619BC835300257FC2 /* QTRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRViewController.m; sourceTree = "<group>"; };
 		1718E8C819BC835300257FC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1718E8CE19BC835300257FC2 /* CircularTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircularTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1718E8CF19BC835300257FC2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1718E8D719BC835300257FC2 /* CircularTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircularTimerTests-Info.plist"; sourceTree = "<group>"; };
 		1718E8D919BC835300257FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1718E8DB19BC835300257FC2 /* CircularTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircularTimerTests.m; sourceTree = "<group>"; };
+		1718E8E819BC844200257FC2 /* QTRCircularTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRCircularTimerViewController.h; sourceTree = "<group>"; };
+		1718E8E919BC844200257FC2 /* QTRCircularTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRCircularTimerViewController.m; sourceTree = "<group>"; };
+		1718E8EB19BCACA000257FC2 /* QTRCircularTimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRCircularTimerView.h; sourceTree = "<group>"; };
+		1718E8EC19BCACA000257FC2 /* QTRCircularTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRCircularTimerView.m; sourceTree = "<group>"; };
+		1726708C19BCEFDC006C0D04 /* QTRTimeEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRTimeEmitter.h; sourceTree = "<group>"; };
+		1726708D19BCEFDC006C0D04 /* QTRTimeEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRTimeEmitter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +121,14 @@
 				1718E8BF19BC835300257FC2 /* QTRAppDelegate.h */,
 				1718E8C019BC835300257FC2 /* QTRAppDelegate.m */,
 				1718E8C219BC835300257FC2 /* Main.storyboard */,
-				1718E8C519BC835300257FC2 /* QTRViewController.h */,
-				1718E8C619BC835300257FC2 /* QTRViewController.m */,
 				1718E8C819BC835300257FC2 /* Images.xcassets */,
 				1718E8B719BC835200257FC2 /* Supporting Files */,
+				1718E8E819BC844200257FC2 /* QTRCircularTimerViewController.h */,
+				1718E8E919BC844200257FC2 /* QTRCircularTimerViewController.m */,
+				1718E8EB19BCACA000257FC2 /* QTRCircularTimerView.h */,
+				1718E8EC19BCACA000257FC2 /* QTRCircularTimerView.m */,
+				1726708C19BCEFDC006C0D04 /* QTRTimeEmitter.h */,
+				1726708D19BCEFDC006C0D04 /* QTRTimeEmitter.m */,
 			);
 			path = CircularTimer;
 			sourceTree = "<group>";
@@ -251,8 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1718E8C119BC835300257FC2 /* QTRAppDelegate.m in Sources */,
-				1718E8C719BC835300257FC2 /* QTRViewController.m in Sources */,
+				1718E8EA19BC844200257FC2 /* QTRCircularTimerViewController.m in Sources */,
 				1718E8BD19BC835200257FC2 /* main.m in Sources */,
+				1718E8ED19BCACA000257FC2 /* QTRCircularTimerView.m in Sources */,
+				1726708E19BCEFDC006C0D04 /* QTRTimeEmitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +469,7 @@
 				1718E8E119BC835300257FC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1718E8E219BC835300257FC2 /* Build configuration list for PBXNativeTarget "CircularTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +478,7 @@
 				1718E8E419BC835300257FC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

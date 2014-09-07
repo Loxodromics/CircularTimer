@@ -1,5 +1,5 @@
 //
-//  QTRViewController.h
+//  QTRCircularTimerViewController.h
 //  CircularTimer
 //
 //  Created by -philipp on 07.09.14.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QTRViewController : UIViewController
+@interface QTRCircularTimerViewController : UIViewController
+
+- (void)update:(NSTimer*)timer;
 
 @end
