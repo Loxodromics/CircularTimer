@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1718E8B119BC835200257FC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1718E8B019BC835200257FC2 /* Foundation.framework */; };
+		1718E8B319BC835200257FC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1718E8B219BC835200257FC2 /* CoreGraphics.framework */; };
+		1718E8B519BC835200257FC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1718E8B419BC835200257FC2 /* UIKit.framework */; };
+		1718E8BB19BC835200257FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1718E8B919BC835200257FC2 /* InfoPlist.strings */; };
+		1718E8BD19BC835200257FC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8BC19BC835200257FC2 /* main.m */; };
+		1718E8C119BC835300257FC2 /* QTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8C019BC835300257FC2 /* QTRAppDelegate.m */; };
+		1718E8C419BC835300257FC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1718E8C219BC835300257FC2 /* Main.storyboard */; };
+		1718E8C719BC835300257FC2 /* QTRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8C619BC835300257FC2 /* QTRViewController.m */; };
+		1718E8C919BC835300257FC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1718E8C819BC835300257FC2 /* Images.xcassets */; };
+		1718E8D019BC835300257FC2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1718E8CF19BC835300257FC2 /* XCTest.framework */; };
+		1718E8D119BC835300257FC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1718E8B019BC835200257FC2 /* Foundation.framework */; };
+		1718E8D219BC835300257FC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1718E8B419BC835200257FC2 /* UIKit.framework */; };
+		1718E8DA19BC835300257FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1718E8D819BC835300257FC2 /* InfoPlist.strings */; };
+		1718E8DC19BC835300257FC2 /* CircularTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8DB19BC835300257FC2 /* CircularTimerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1718E8D319BC835300257FC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1718E8A519BC835200257FC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1718E8AC19BC835200257FC2;
+			remoteInfo = CircularTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1718E8AD19BC835200257FC2 /* CircularTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1718E8B019BC835200257FC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1718E8B219BC835200257FC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1718E8B419BC835200257FC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1718E8B819BC835200257FC2 /* CircularTimer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircularTimer-Info.plist"; sourceTree = "<group>"; };
+		1718E8BA19BC835200257FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1718E8BC19BC835200257FC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1718E8BE19BC835200257FC2 /* CircularTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircularTimer-Prefix.pch"; sourceTree = "<group>"; };
+		1718E8BF19BC835300257FC2 /* QTRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRAppDelegate.h; sourceTree = "<group>"; };
+		1718E8C019BC835300257FC2 /* QTRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRAppDelegate.m; sourceTree = "<group>"; };
+		1718E8C319BC835300257FC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1718E8C519BC835300257FC2 /* QTRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QTRViewController.h; sourceTree = "<group>"; };
+		1718E8C619BC835300257FC2 /* QTRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QTRViewController.m; sourceTree = "<group>"; };
+		1718E8C819BC835300257FC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1718E8CE19BC835300257FC2 /* CircularTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircularTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1718E8CF19BC835300257FC2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1718E8D719BC835300257FC2 /* CircularTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircularTimerTests-Info.plist"; sourceTree = "<group>"; };
+		1718E8D919BC835300257FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1718E8DB19BC835300257FC2 /* CircularTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircularTimerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1718E8AA19BC835200257FC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1718E8B319BC835200257FC2 /* CoreGraphics.framework in Frameworks */,
+				1718E8B519BC835200257FC2 /* UIKit.framework in Frameworks */,
+				1718E8B119BC835200257FC2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1718E8CB19BC835300257FC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1718E8D019BC835300257FC2 /* XCTest.framework in Frameworks */,
+				1718E8D219BC835300257FC2 /* UIKit.framework in Frameworks */,
+				1718E8D119BC835300257FC2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1718E8A419BC835200257FC2 = {
+			isa = PBXGroup;
+			children = (
+				1718E8B619BC835200257FC2 /* CircularTimer */,
+				1718E8D519BC835300257FC2 /* CircularTimerTests */,
+				1718E8AF19BC835200257FC2 /* Frameworks */,
+				1718E8AE19BC835200257FC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1718E8AE19BC835200257FC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1718E8AD19BC835200257FC2 /* CircularTimer.app */,
+				1718E8CE19BC835300257FC2 /* CircularTimerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1718E8AF19BC835200257FC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1718E8B019BC835200257FC2 /* Foundation.framework */,
+				1718E8B219BC835200257FC2 /* CoreGraphics.framework */,
+				1718E8B419BC835200257FC2 /* UIKit.framework */,
+				1718E8CF19BC835300257FC2 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1718E8B619BC835200257FC2 /* CircularTimer */ = {
+			isa = PBXGroup;
+			children = (
+				1718E8BF19BC835300257FC2 /* QTRAppDelegate.h */,
+				1718E8C019BC835300257FC2 /* QTRAppDelegate.m */,
+				1718E8C219BC835300257FC2 /* Main.storyboard */,
+				1718E8C519BC835300257FC2 /* QTRViewController.h */,
+				1718E8C619BC835300257FC2 /* QTRViewController.m */,
+				1718E8C819BC835300257FC2 /* Images.xcassets */,
+				1718E8B719BC835200257FC2 /* Supporting Files */,
+			);
+			path = CircularTimer;
+			sourceTree = "<group>";
+		};
+		1718E8B719BC835200257FC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1718E8B819BC835200257FC2 /* CircularTimer-Info.plist */,
+				1718E8B919BC835200257FC2 /* InfoPlist.strings */,
+				1718E8BC19BC835200257FC2 /* main.m */,
+				1718E8BE19BC835200257FC2 /* CircularTimer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1718E8D519BC835300257FC2 /* CircularTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				1718E8DB19BC835300257FC2 /* CircularTimerTests.m */,
+				1718E8D619BC835300257FC2 /* Supporting Files */,
+			);
+			path = CircularTimerTests;
+			sourceTree = "<group>";
+		};
+		1718E8D619BC835300257FC2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1718E8D719BC835300257FC2 /* CircularTimerTests-Info.plist */,
+				1718E8D819BC835300257FC2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1718E8AC19BC835200257FC2 /* CircularTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1718E8DF19BC835300257FC2 /* Build configuration list for PBXNativeTarget "CircularTimer" */;
+			buildPhases = (
+				1718E8A919BC835200257FC2 /* Sources */,
+				1718E8AA19BC835200257FC2 /* Frameworks */,
+				1718E8AB19BC835200257FC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircularTimer;
+			productName = CircularTimer;
+			productReference = 1718E8AD19BC835200257FC2 /* CircularTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1718E8CD19BC835300257FC2 /* CircularTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1718E8E219BC835300257FC2 /* Build configuration list for PBXNativeTarget "CircularTimerTests" */;
+			buildPhases = (
+				1718E8CA19BC835300257FC2 /* Sources */,
+				1718E8CB19BC835300257FC2 /* Frameworks */,
+				1718E8CC19BC835300257FC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1718E8D419BC835300257FC2 /* PBXTargetDependency */,
+			);
+			name = CircularTimerTests;
+			productName = CircularTimerTests;
+			productReference = 1718E8CE19BC835300257FC2 /* CircularTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1718E8A519BC835200257FC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = QTR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Quatur;
+				TargetAttributes = {
+					1718E8CD19BC835300257FC2 = {
+						TestTargetID = 1718E8AC19BC835200257FC2;
+					};
+				};
+			};
+			buildConfigurationList = 1718E8A819BC835200257FC2 /* Build configuration list for PBXProject "CircularTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1718E8A419BC835200257FC2;
+			productRefGroup = 1718E8AE19BC835200257FC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1718E8AC19BC835200257FC2 /* CircularTimer */,
+				1718E8CD19BC835300257FC2 /* CircularTimerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1718E8AB19BC835200257FC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1718E8C919BC835300257FC2 /* Images.xcassets in Resources */,
+				1718E8BB19BC835200257FC2 /* InfoPlist.strings in Resources */,
+				1718E8C419BC835300257FC2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1718E8CC19BC835300257FC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1718E8DA19BC835300257FC2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1718E8A919BC835200257FC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1718E8C119BC835300257FC2 /* QTRAppDelegate.m in Sources */,
+				1718E8C719BC835300257FC2 /* QTRViewController.m in Sources */,
+				1718E8BD19BC835200257FC2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1718E8CA19BC835300257FC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1718E8DC19BC835300257FC2 /* CircularTimerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1718E8D419BC835300257FC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1718E8AC19BC835200257FC2 /* CircularTimer */;
+			targetProxy = 1718E8D319BC835300257FC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1718E8B919BC835200257FC2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1718E8BA19BC835200257FC2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1718E8C219BC835300257FC2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1718E8C319BC835300257FC2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1718E8D819BC835300257FC2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1718E8D919BC835300257FC2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1718E8DD19BC835300257FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1718E8DE19BC835300257FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1718E8E019BC835300257FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircularTimer/CircularTimer-Prefix.pch";
+				INFOPLIST_FILE = "CircularTimer/CircularTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1718E8E119BC835300257FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircularTimer/CircularTimer-Prefix.pch";
+				INFOPLIST_FILE = "CircularTimer/CircularTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1718E8E319BC835300257FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CircularTimer.app/CircularTimer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircularTimer/CircularTimer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CircularTimerTests/CircularTimerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1718E8E419BC835300257FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CircularTimer.app/CircularTimer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircularTimer/CircularTimer-Prefix.pch";
+				INFOPLIST_FILE = "CircularTimerTests/CircularTimerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1718E8A819BC835200257FC2 /* Build configuration list for PBXProject "CircularTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1718E8DD19BC835300257FC2 /* Debug */,
+				1718E8DE19BC835300257FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1718E8DF19BC835300257FC2 /* Build configuration list for PBXNativeTarget "CircularTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1718E8E019BC835300257FC2 /* Debug */,
+				1718E8E119BC835300257FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1718E8E219BC835300257FC2 /* Build configuration list for PBXNativeTarget "CircularTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1718E8E319BC835300257FC2 /* Debug */,
+				1718E8E419BC835300257FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1718E8A519BC835200257FC2 /* Project object */;
+}
