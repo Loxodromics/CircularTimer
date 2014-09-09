@@ -94,7 +94,17 @@
     [self.circularTimerView setNeedsDisplay];
 }
 
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
+{
+    [self handleTouches:touches];
+}
+
 - (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event
+{
+    [self handleTouches:touches];
+}
+
+- (void)handleTouches:(NSSet *)touches
 {
     if ( !self.isRunning )
     {
