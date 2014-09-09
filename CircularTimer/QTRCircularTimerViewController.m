@@ -55,8 +55,6 @@
 {
     [super viewWillAppear:animated];
     
-    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(update:) userInfo:nil repeats:YES];
-    
     [self update:nil];
     
     [self showTextTimer];
@@ -226,11 +224,13 @@
     
     if ( !self.isRunning )
     {
+        [self.updateTimer invalidate];
         [[QTRTimeEmitter sharedInstance] pause];
         [self showTextSetTime];
     }
     else
     {
+        self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(update:) userInfo:nil repeats:YES];
         [[QTRTimeEmitter sharedInstance] run];
         [self showRunningText];
     }
