@@ -48,6 +48,12 @@
     
     [[QTRTimeKeeper sharedInstance] setDeltaT:(15 * 60)]; // 15min
     
+    // to restart the animations
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationEnteredForeground:)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -244,16 +250,29 @@
                      }];
 }
 
+- (void)clearAnimations
+{
+    [CATransaction begin];
+    [self.helpLabel.layer removeAllAnimations];
+    [CATransaction commit];
+}
+
+- (void)applicationEnteredForeground:(NSNotification *)notification
+{
+    if ( !self.isRunning )
+    {
+        [self clearAnimations];
+        [self showTextSetTimeNoWait];
+    }
+}
+
 #pragma mark - user interaction
 
 - (IBAction)startStopTimerButtonFired:(id)sender
 {
+    [self clearAnimations];
+
     self.isRunning = !self.isRunning;
-    
-    [CATransaction begin];
-    [self.helpLabel.layer removeAllAnimations];
-    [CATransaction commit];
-    
     if ( !self.isRunning )
     {
         [self.updateTimer invalidate];
