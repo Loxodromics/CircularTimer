@@ -9,7 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "QTRCircularTimerViewController.h"
 #import "QTRCircularTimerView.h"
-#import "QTRTimeEmitter.h"
+#import "QTRTimeKeeper.h"
 
 @interface QTRCircularTimerViewController ()
 
@@ -47,7 +47,7 @@
     self.timerRunningText = @"  sleep tight...";
     self.isRunning = false;
     
-    [[QTRTimeEmitter sharedInstance] setDeltaT:(15 * 60)];
+    [[QTRTimeKeeper sharedInstance] setDeltaT:(15 * 60)];
     
 }
 
@@ -75,12 +75,12 @@
 - (void)update:(NSTimer*)timer
 {
     
-    self.angle = [[QTRTimeEmitter sharedInstance] getTimeLeft] / 3600.0 * 2 * M_PI;
+    self.angle = [[QTRTimeKeeper sharedInstance] getTimeLeft] / 3600.0 * 2 * M_PI;
     
     if ( self.angle <= 0.0 )
     {
         self.angle = 0.0001;
-//            [[QTRTimeEmitter sharedInstance] pause];
+//        [[QTRTimeEmitter sharedInstance] pause];
     }
     
     self.minutesLeft = (self.angle / (M_PI * 2)) * 60;
@@ -111,7 +111,6 @@
             CGPoint arcCenter = CGPointMake(self.circularTimerView.center.x - self.circularTimerView.frame.origin.x,
                                             self.circularTimerView.center.y - self.circularTimerView.frame.origin.y);
             CGPoint location = [touch locationInView:self.circularTimerView];
-            
             CGFloat atanAngle = atan2((location.y - arcCenter.y), (location.x - arcCenter.x));
             
             self.angle = atanAngle + 0.5 * M_PI;
@@ -120,9 +119,8 @@
                 self.angle += 2.0f * M_PI;
             }
             
-            [[QTRTimeEmitter sharedInstance] setDeltaT:(self.angle / (2 * M_PI) * 3600.0f)];
+            [[QTRTimeKeeper sharedInstance] setDeltaT:(self.angle / (2 * M_PI) * 3600.0f)];
             
-            NSLog(@"location: %f, %f, _percent: %f, time: %f", location.x, location.y, atanAngle, self.angle);
             [self update:nil];
         }
     }
@@ -214,6 +212,36 @@
      
 }
 
+- (void)showTextSetTimeNoWait
+{
+    [UIView animateWithDuration:0.5
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         self.helpLabel.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         
+                         if ( finished && !self.isRunning )
+                         {
+                             self.helpLabel.text = self.setTimerText;
+                             
+                             [UIView animateWithDuration:0.5
+                                                   delay:0.0
+                                                 options:UIViewAnimationOptionCurveEaseIn
+                                              animations:^{
+                                                  self.helpLabel.alpha = 1.0;
+                                              }
+                                              completion:^(BOOL finished){
+                                                  
+                                                  [self showTextTimer];
+                                                  
+                                              }];
+                         }
+                     }];
+}
+
+
 - (IBAction)startStopTimerButtonFired:(id)sender
 {
     self.isRunning = !self.isRunning;
@@ -225,17 +253,15 @@
     if ( !self.isRunning )
     {
         [self.updateTimer invalidate];
-        [[QTRTimeEmitter sharedInstance] pause];
-        [self showTextSetTime];
+        [[QTRTimeKeeper sharedInstance] pause];
+        [self showTextSetTimeNoWait];
     }
     else
     {
         self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(update:) userInfo:nil repeats:YES];
-        [[QTRTimeEmitter sharedInstance] run];
+        [[QTRTimeKeeper sharedInstance] run];
         [self showRunningText];
     }
 }
-
-//Touch to start timer
 
 @end

@@ -1,25 +1,25 @@
 //
-//  QTRTimeEmitter.m
+//  QTRTimeKeeper.m
 //  CircularTimer
 //
 //  Created by -philipp on 07.09.14.
 //  Copyright (c) 2014 Quatur. All rights reserved.
 //
 
-#import "QTRTimeEmitter.h"
+#import "QTRTimeKeeper.h"
 
-@interface QTRTimeEmitter()
+@interface QTRTimeKeeper()
 
 @property (nonatomic, strong) NSDate* startTime;
 @property (nonatomic) bool isRunning;
 
 @end
 
-@implementation QTRTimeEmitter
+@implementation QTRTimeKeeper
 
 + (id)sharedInstance
 {
-    static QTRTimeEmitter* mySharedInstance = nil;
+    static QTRTimeKeeper* mySharedInstance = nil;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{

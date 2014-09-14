@@ -22,7 +22,7 @@
 		1718E8DC19BC835300257FC2 /* CircularTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8DB19BC835300257FC2 /* CircularTimerTests.m */; };
 		1718E8EA19BC844200257FC2 /* QTRCircularTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8E919BC844200257FC2 /* QTRCircularTimerViewController.m */; };
 		1718E8ED19BCACA000257FC2 /* QTRCircularTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8EC19BCACA000257FC2 /* QTRCircularTimerView.m */; };
-		1726708E19BCEFDC006C0D04 /* QTRTimeEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1726708D19BCEFDC006C0D04 /* QTRTimeEmitter.m */; };
+		1726708E19BCEFDC006C0D04 /* QTRTimeKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1726708D19BCEFDC006C0D04 /* QTRTimeKeeper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		1718E8E919BC844200257FC2 /* QTRCircularTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRCircularTimerViewController.m; sourceTree = "<group>"; };
 		1718E8EB19BCACA000257FC2 /* QTRCircularTimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRCircularTimerView.h; sourceTree = "<group>"; };
 		1718E8EC19BCACA000257FC2 /* QTRCircularTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRCircularTimerView.m; sourceTree = "<group>"; };
-		1726708C19BCEFDC006C0D04 /* QTRTimeEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRTimeEmitter.h; sourceTree = "<group>"; };
-		1726708D19BCEFDC006C0D04 /* QTRTimeEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRTimeEmitter.m; sourceTree = "<group>"; };
+		1726708C19BCEFDC006C0D04 /* QTRTimeKeeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRTimeKeeper.h; sourceTree = "<group>"; };
+		1726708D19BCEFDC006C0D04 /* QTRTimeKeeper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRTimeKeeper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +127,8 @@
 				1718E8E919BC844200257FC2 /* QTRCircularTimerViewController.m */,
 				1718E8EB19BCACA000257FC2 /* QTRCircularTimerView.h */,
 				1718E8EC19BCACA000257FC2 /* QTRCircularTimerView.m */,
-				1726708C19BCEFDC006C0D04 /* QTRTimeEmitter.h */,
-				1726708D19BCEFDC006C0D04 /* QTRTimeEmitter.m */,
+				1726708C19BCEFDC006C0D04 /* QTRTimeKeeper.h */,
+				1726708D19BCEFDC006C0D04 /* QTRTimeKeeper.m */,
 			);
 			path = CircularTimer;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 				1718E8EA19BC844200257FC2 /* QTRCircularTimerViewController.m in Sources */,
 				1718E8BD19BC835200257FC2 /* main.m in Sources */,
 				1718E8ED19BCACA000257FC2 /* QTRCircularTimerView.m in Sources */,
-				1726708E19BCEFDC006C0D04 /* QTRTimeEmitter.m in Sources */,
+				1726708E19BCEFDC006C0D04 /* QTRTimeKeeper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

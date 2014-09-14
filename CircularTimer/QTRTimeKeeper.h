@@ -1,5 +1,5 @@
 //
-//  QTRTimeEmitter.h
+//  QTRTimeKeeper.h
 //  CircularTimer
 //
 //  Created by -philipp on 07.09.14.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface QTRTimeEmitter : NSObject
+@interface QTRTimeKeeper : NSObject
 
 @property (nonatomic) NSTimeInterval deltaT;
 
