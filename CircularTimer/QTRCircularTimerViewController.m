@@ -13,12 +13,12 @@
 
 @interface QTRCircularTimerViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *minutesCounterLabel;
-@property (weak, nonatomic) IBOutlet UILabel *minutesLabel;
-@property (weak, nonatomic) IBOutlet UILabel *secondsCounterLabel;
-@property (weak, nonatomic) IBOutlet UILabel *secondsLabel;
+@property (weak, nonatomic) IBOutlet UILabel* minutesCounterLabel;
+@property (weak, nonatomic) IBOutlet UILabel* minutesLabel;
+@property (weak, nonatomic) IBOutlet UILabel* secondsCounterLabel;
+@property (weak, nonatomic) IBOutlet UILabel* secondsLabel;
 @property (weak, nonatomic) IBOutlet QTRCircularTimerView* circularTimerView;
-@property (weak, nonatomic) IBOutlet UILabel *helpLabel;
+@property (weak, nonatomic) IBOutlet UILabel* helpLabel;
 
 @property (strong, nonatomic) NSTimer* updateTimer;
 
@@ -41,13 +41,12 @@
     
     self.minutesLabel.text = @"m";
     self.secondsLabel.text = @"s";
-    self.angle = 0.5 * M_PI;
     self.startTimerText = @"Touch the moon to start\nthe sleep timer";
     self.setTimerText = @"Touch the circle to set\nthe sleep time";
     self.timerRunningText = @"  sleep tight...";
     self.isRunning = false;
     
-    [[QTRTimeKeeper sharedInstance] setDeltaT:(15 * 60)];
+    [[QTRTimeKeeper sharedInstance] setDeltaT:(15 * 60)]; // 15min
     
 }
 
@@ -92,6 +91,8 @@
     [self.circularTimerView setNeedsDisplay];
 }
 
+#pragma mark - touch events
+
 - (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
 {
     [self handleTouches:touches];
@@ -125,6 +126,8 @@
         }
     }
 }
+
+#pragma mark - animations
 
 - (void)showTextTimer
 {
@@ -241,6 +244,7 @@
                      }];
 }
 
+#pragma mark - user interaction
 
 - (IBAction)startStopTimerButtonFired:(id)sender
 {
