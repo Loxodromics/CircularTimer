@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QTRCircularTimerView.h"
 
 @interface QTRCircularTimerViewController : UIViewController
+@property (weak, nonatomic) IBOutlet QTRCircularTimerView *circularTimerView;
 
 - (void)update:(NSTimer*)timer;
 

@@ -8,17 +8,9 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "QTRCircularTimerViewController.h"
-#import "QTRCircularTimerView.h"
 #import "QTRTimeKeeper.h"
 
 @interface QTRCircularTimerViewController ()
-
-@property (weak, nonatomic) IBOutlet UILabel* minutesCounterLabel;
-@property (weak, nonatomic) IBOutlet UILabel* minutesLabel;
-@property (weak, nonatomic) IBOutlet UILabel* secondsCounterLabel;
-@property (weak, nonatomic) IBOutlet UILabel* secondsLabel;
-@property (weak, nonatomic) IBOutlet QTRCircularTimerView* circularTimerView;
-@property (weak, nonatomic) IBOutlet UILabel* helpLabel;
 
 @property (strong, nonatomic) NSTimer* updateTimer;
 
@@ -39,12 +31,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.minutesLabel.text = @"m";
-    self.secondsLabel.text = @"s";
+//    self.circularTimerView = [[QTRCircularTimerView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 210.f, 210.0f)];
+//    [self.view addSubview:self.circularTimerView];
+    
+    self.circularTimerView.minutesLabel.text = @"m";
+    self.circularTimerView.secondsLabel.text = @"s";
     self.startTimerText = @"Touch the moon to start\nthe sleep timer";
     self.setTimerText = @"Touch the circle to set\nthe sleep time";
     self.timerRunningText = @"  sleep tight...";
     self.isRunning = false;
+    self.circularTimerView.helpLabel.text = self.setTimerText;
     
     [[QTRTimeKeeper sharedInstance] setDeltaT:(15 * 60)]; // 15min
     
@@ -53,6 +49,10 @@
                                              selector:@selector(applicationEnteredForeground:)
                                                  name:UIApplicationWillEnterForegroundNotification
                                                object:nil];
+    
+    [self.circularTimerView.startStopButton addTarget:self
+                                               action:@selector(startStopTimerButtonFired:)
+                                     forControlEvents:UIControlEventTouchUpInside];
     
 }
 
@@ -90,8 +90,8 @@
     
     self.minutesLeft = (self.angle / (M_PI * 2)) * 60;
     self.secondsLeft = (int)((self.angle / (M_PI * 2)) * 3600) % 60;
-    self.secondsCounterLabel.text = [NSString stringWithFormat:@"%02ld", (long)self.secondsLeft];
-    self.minutesCounterLabel.text = [NSString stringWithFormat:@"%02ld", (long)self.minutesLeft];
+    self.circularTimerView.secondsCounterLabel.text = [NSString stringWithFormat:@"%02ld", (long)self.secondsLeft];
+    self.circularTimerView.minutesCounterLabel.text = [NSString stringWithFormat:@"%02ld", (long)self.minutesLeft];
     
     [self.circularTimerView setEndAngle:self.angle];
     [self.circularTimerView setNeedsDisplay];
@@ -141,18 +141,18 @@
                           delay:5.0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                         self.helpLabel.alpha = 0.0;
+                         self.circularTimerView.helpLabel.alpha = 0.0;
                      }
                      completion:^(BOOL finished){
                          if ( finished && !self.isRunning )
                          {
-                             self.helpLabel.text = self.startTimerText;
+                             self.circularTimerView.helpLabel.text = self.startTimerText;
                              
                              [UIView animateWithDuration:0.5
                                                    delay:0.0
                                                  options:UIViewAnimationOptionCurveEaseIn
                                               animations:^{
-                                                  self.helpLabel.alpha = 1.0;
+                                                  self.circularTimerView.helpLabel.alpha = 1.0;
                                               }
                                               completion:^(BOOL finished){
                                                   
@@ -169,19 +169,19 @@
                           delay:5.0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                         self.helpLabel.alpha = 0.0;
+                         self.circularTimerView.helpLabel.alpha = 0.0;
                      }
                      completion:^(BOOL finished){
                          
                          if ( finished && !self.isRunning )
                          {
-                             self.helpLabel.text = self.setTimerText;
+                             self.circularTimerView.helpLabel.text = self.setTimerText;
                          
                              [UIView animateWithDuration:0.5
                                                    delay:0.0
                                                  options:UIViewAnimationOptionCurveEaseIn
                                               animations:^{
-                                                  self.helpLabel.alpha = 1.0;
+                                                  self.circularTimerView.helpLabel.alpha = 1.0;
                                               }
                                               completion:^(BOOL finished){
                                                   
@@ -198,19 +198,19 @@
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                         self.helpLabel.alpha = 0.0;
+                         self.circularTimerView.helpLabel.alpha = 0.0;
                      }
                      completion:^(BOOL finished){
                          
                          if ( finished )
                          {
-                             self.helpLabel.text = self.timerRunningText;
+                             self.circularTimerView.helpLabel.text = self.timerRunningText;
                              
                              [UIView animateWithDuration:0.5
                                                    delay:0.0
                                                  options:UIViewAnimationOptionCurveEaseIn
                                               animations:^{
-                                                  self.helpLabel.alpha = 1.0;
+                                                  self.circularTimerView.helpLabel.alpha = 1.0;
                                               }
                                               completion:^(BOOL finished){
                                                   
@@ -227,19 +227,19 @@
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                         self.helpLabel.alpha = 0.0;
+                         self.circularTimerView.helpLabel.alpha = 0.0;
                      }
                      completion:^(BOOL finished){
                          
                          if ( finished && !self.isRunning )
                          {
-                             self.helpLabel.text = self.setTimerText;
+                             self.circularTimerView.helpLabel.text = self.setTimerText;
                              
                              [UIView animateWithDuration:0.5
                                                    delay:0.0
                                                  options:UIViewAnimationOptionCurveEaseIn
                                               animations:^{
-                                                  self.helpLabel.alpha = 1.0;
+                                                  self.circularTimerView.helpLabel.alpha = 1.0;
                                               }
                                               completion:^(BOOL finished){
                                                   
@@ -253,7 +253,7 @@
 - (void)clearAnimations
 {
     [CATransaction begin];
-    [self.helpLabel.layer removeAllAnimations];
+    [self.circularTimerView.helpLabel.layer removeAllAnimations];
     [CATransaction commit];
 }
 
@@ -281,7 +281,11 @@
     }
     else
     {
-        self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(update:) userInfo:nil repeats:YES];
+        self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                            target:self
+                                                          selector:@selector(update:)
+                                                          userInfo:nil
+                                                           repeats:YES];
         [[QTRTimeKeeper sharedInstance] run];
         [self showRunningText];
     }

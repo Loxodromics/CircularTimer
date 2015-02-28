@@ -10,6 +10,15 @@
 
 @interface QTRCircularTimerView : UIView
 
+// labels
+@property (strong, nonatomic) UILabel* minutesCounterLabel;
+@property (strong, nonatomic) UILabel* minutesLabel;
+@property (strong, nonatomic) UILabel* secondsCounterLabel;
+@property (strong, nonatomic) UILabel* secondsLabel;
+@property (strong, nonatomic) UILabel* helpLabel;
+@property (strong, nonatomic) UILabel* moonLabel;
+@property (strong, nonatomic) UIButton* startStopButton;
+
 // to set the current angle
 @property (nonatomic) CGFloat endAngle;
 

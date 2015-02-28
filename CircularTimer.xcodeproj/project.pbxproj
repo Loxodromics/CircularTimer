@@ -23,6 +23,8 @@
 		1718E8EA19BC844200257FC2 /* QTRCircularTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8E919BC844200257FC2 /* QTRCircularTimerViewController.m */; };
 		1718E8ED19BCACA000257FC2 /* QTRCircularTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718E8EC19BCACA000257FC2 /* QTRCircularTimerView.m */; };
 		1726708E19BCEFDC006C0D04 /* QTRTimeKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1726708D19BCEFDC006C0D04 /* QTRTimeKeeper.m */; };
+		17CDB50B1A8FFFC800BFE03B /* QTRCircularTimer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CDB50A1A8FFFC800BFE03B /* QTRCircularTimer.xib */; };
+		17CDB50E1A9003A900BFE03B /* QTRExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CDB50D1A9003A900BFE03B /* QTRExampleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,9 @@
 		1718E8EC19BCACA000257FC2 /* QTRCircularTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRCircularTimerView.m; sourceTree = "<group>"; };
 		1726708C19BCEFDC006C0D04 /* QTRTimeKeeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRTimeKeeper.h; sourceTree = "<group>"; };
 		1726708D19BCEFDC006C0D04 /* QTRTimeKeeper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRTimeKeeper.m; sourceTree = "<group>"; };
+		17CDB50A1A8FFFC800BFE03B /* QTRCircularTimer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QTRCircularTimer.xib; sourceTree = "<group>"; };
+		17CDB50C1A9003A900BFE03B /* QTRExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTRExampleViewController.h; sourceTree = "<group>"; };
+		17CDB50D1A9003A900BFE03B /* QTRExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTRExampleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +134,9 @@
 				1718E8EC19BCACA000257FC2 /* QTRCircularTimerView.m */,
 				1726708C19BCEFDC006C0D04 /* QTRTimeKeeper.h */,
 				1726708D19BCEFDC006C0D04 /* QTRTimeKeeper.m */,
+				17CDB50A1A8FFFC800BFE03B /* QTRCircularTimer.xib */,
+				17CDB50C1A9003A900BFE03B /* QTRExampleViewController.h */,
+				17CDB50D1A9003A900BFE03B /* QTRExampleViewController.m */,
 			);
 			path = CircularTimer;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 			files = (
 				1718E8C919BC835300257FC2 /* Images.xcassets in Resources */,
 				1718E8BB19BC835200257FC2 /* InfoPlist.strings in Resources */,
+				17CDB50B1A8FFFC800BFE03B /* QTRCircularTimer.xib in Resources */,
 				1718E8C419BC835300257FC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1718E8C119BC835300257FC2 /* QTRAppDelegate.m in Sources */,
+				17CDB50E1A9003A900BFE03B /* QTRExampleViewController.m in Sources */,
 				1718E8EA19BC844200257FC2 /* QTRCircularTimerViewController.m in Sources */,
 				1718E8BD19BC835200257FC2 /* main.m in Sources */,
 				1718E8ED19BCACA000257FC2 /* QTRCircularTimerView.m in Sources */,
