@@ -65,6 +65,9 @@
                                     <action selector="dismissButtonFired:" destination="bxH-CQ-LNh" eventType="touchUpInside" id="yJj-Iq-KgW"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWZ-Es-Y6C">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1803921568627451" green="0.20000000000000001" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -73,6 +76,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="OWZ-Es-Y6C" id="ZOW-B5-yY3"/>
                         <outlet property="circularTimerView" destination="6AF-1v-5Qp" id="QuJ-MB-jJn"/>
                         <outlet property="dismissButton" destination="aJ5-q3-011" id="xlk-Jt-bc8"/>
                     </connections>

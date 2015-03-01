@@ -12,6 +12,7 @@
 @interface QTRCircularTimerViewController : UIViewController
 @property (weak, nonatomic) IBOutlet QTRCircularTimerView* circularTimerView;
 @property (weak, nonatomic) IBOutlet UIButton* dismissButton;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 - (void)update:(NSTimer*)timer;
 
