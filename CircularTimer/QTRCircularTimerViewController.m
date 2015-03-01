@@ -54,6 +54,11 @@
                                                action:@selector(startStopTimerButtonFired:)
                                      forControlEvents:UIControlEventTouchUpInside];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(startStopTimerButtonFired:)
+                                                 name:@"QTRTimeKeeperTimerFired"
+                                               object:nil];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -85,7 +90,6 @@
     if ( self.angle <= 0.0 )
     {
         self.angle = 0.0001;
-//        [[QTRTimeEmitter sharedInstance] pause];
     }
     
     self.minutesLeft = (self.angle / (M_PI * 2)) * 60;

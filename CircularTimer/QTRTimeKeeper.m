@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSDate* startTime;
 @property (nonatomic) bool isRunning;
+@property (nonatomic, strong) NSTimer* timer;
 
 @end
 
@@ -41,12 +42,15 @@
 {
     self.isRunning = YES;
     self.startTime = [NSDate date];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.deltaT target:self selector:@selector(timerFired) userInfo:nil repeats:NO];
 }
 
 - (void)pause
 {
     self.isRunning = NO;
     self.deltaT += [self.startTime timeIntervalSinceNow];
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 - (NSTimeInterval)getTimeLeft
@@ -59,6 +63,11 @@
     {
         return self.deltaT;
     }
+}
+
+- (void)timerFired
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"QTRTimeKeeperTimerFired" object:self];
 }
 
 @end
