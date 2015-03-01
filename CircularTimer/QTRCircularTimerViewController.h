@@ -10,7 +10,8 @@
 #import "QTRCircularTimerView.h"
 
 @interface QTRCircularTimerViewController : UIViewController
-@property (weak, nonatomic) IBOutlet QTRCircularTimerView *circularTimerView;
+@property (weak, nonatomic) IBOutlet QTRCircularTimerView* circularTimerView;
+@property (weak, nonatomic) IBOutlet UIButton* dismissButton;
 
 - (void)update:(NSTimer*)timer;
 

@@ -291,4 +291,8 @@
     }
 }
 
+- (IBAction)dismissButtonFired:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
