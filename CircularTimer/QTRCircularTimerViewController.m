@@ -277,6 +277,11 @@
         [self.updateTimer invalidate];
         [[QTRTimeKeeper sharedInstance] pause];
         [self showTextSetTimeNoWait];
+        [NSTimer scheduledTimerWithTimeInterval:1.0
+                                         target:self
+                                       selector:@selector(update:)
+                                       userInfo:nil
+                                        repeats:NO];
     }
     else
     {
@@ -288,8 +293,6 @@
         [[QTRTimeKeeper sharedInstance] run];
         [self showRunningText];
     }
-    
-    [self update:nil];
 }
 
 - (IBAction)dismissButtonFired:(id)sender

@@ -53,10 +53,13 @@
 
 - (void)pause
 {
-    self.isRunning = NO;
-    self.deltaT += [self.startTime timeIntervalSinceNow];
-    [self.timer invalidate];
-    self.timer = nil;
+    if ( self.isRunning )
+    {
+        self.isRunning = NO;
+        self.deltaT += [self.startTime timeIntervalSinceNow];
+        [self.timer invalidate];
+        self.timer = nil;
+    }
 }
 
 - (NSTimeInterval)getTimeLeft
@@ -73,6 +76,7 @@
 
 - (void)timerFired
 {
+    [self pause];
     [self assignDeltaT];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"QTRTimeKeeperTimerFired" object:self];
 }
