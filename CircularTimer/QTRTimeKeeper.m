@@ -11,8 +11,8 @@
 @interface QTRTimeKeeper()
 
 @property (nonatomic, strong) NSDate* startTime;
-@property (nonatomic) bool isRunning;
 @property (nonatomic, strong) NSTimer* timer;
+@property (nonatomic) bool isRunning;
 
 @end
 
@@ -31,9 +31,10 @@
 
 - (id)init
 {
-    if (self = [super init])
+    if ( self = [super init] )
     {
-        self.isRunning = NO;
+        _isRunning = NO;
+        [self assignDeltaT];
     }
     return self;
 }
@@ -43,6 +44,11 @@
     self.isRunning = YES;
     self.startTime = [NSDate date];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:self.deltaT target:self selector:@selector(timerFired) userInfo:nil repeats:NO];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"QTRTimeKeeperTimerStarted" object:self userInfo:@{@"time": @(self.deltaT)}];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@(self.deltaT) forKey:@"QTRTimeKeeperDeltaT"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)pause
@@ -67,7 +73,22 @@
 
 - (void)timerFired
 {
+    [self assignDeltaT];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"QTRTimeKeeperTimerFired" object:self];
+}
+
+
+- (void)assignDeltaT
+{
+    NSNumber* storedDeltaT = [[NSUserDefaults standardUserDefaults] objectForKey:@"QTRTimeKeeperDeltaT"];
+    if ( storedDeltaT == nil )
+    {
+        [self setDeltaT:(15 * 60)]; // 15min
+    }
+    else
+    {
+        [self setDeltaT:[storedDeltaT floatValue]];
+    }
 }
 
 @end

@@ -31,9 +31,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    self.circularTimerView = [[QTRCircularTimerView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 210.f, 210.0f)];
-//    [self.view addSubview:self.circularTimerView];
-    
     self.circularTimerView.minutesLabel.text = @"m";
     self.circularTimerView.secondsLabel.text = @"s";
     self.startTimerText = @"Touch the moon to start\nthe sleep timer";
@@ -41,8 +38,6 @@
     self.timerRunningText = @"  sleep tight...";
     self.isRunning = false;
     self.circularTimerView.helpLabel.text = self.setTimerText;
-    
-    [[QTRTimeKeeper sharedInstance] setDeltaT:(15 * 60)]; // 15min
     
     // to restart the animations
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -293,6 +288,8 @@
         [[QTRTimeKeeper sharedInstance] run];
         [self showRunningText];
     }
+    
+    [self update:nil];
 }
 
 - (IBAction)dismissButtonFired:(id)sender
